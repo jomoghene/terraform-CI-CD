@@ -12,17 +12,17 @@ pipeline {
                sh 'terraform fmt'
             }
         }
-         stage('validate') {
+        stage('validate') {
             steps {
                 sh 'terraform validate'
             }
         }
-         stage('plan') {
+        stage('plan') {
             steps {
                 sh 'terraform plan'
             }
         }
-         stage('destroy') {
+        stage('destroy') {
             steps {
                 sh 'terraform destroy --auto-approve'
             }
